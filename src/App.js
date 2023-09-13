@@ -47,7 +47,12 @@ function App() {
         message: 'User Not Found!',
       })
     } else if (response.password !== password) {
-      setLoginCount((item) => item + 1)
+      setLoginCount((item) => item + 1);
+      setSnackbarData({
+        severity: 'error',
+        open: true,
+        message: 'Email or Password is incorrect',
+      })
     } else {
       // setIsUser(true)
       setCurrentScreen('home')
@@ -85,6 +90,8 @@ function App() {
           <Login onLogin={onLogin} />
         )}
         {/* <Signup onSignup={onSignup} /> */}
+
+        
       </div>
       <Footer />
 

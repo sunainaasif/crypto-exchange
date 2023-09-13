@@ -24,9 +24,7 @@ const Login = ({ onLogin }) => {
   } = useForm()
 
   const onSubmit = (data) => {
- 
-    onLogin(data); 
-      
+    onLogin(data)
   }
 
   return (
